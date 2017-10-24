@@ -1,0 +1,234 @@
+/* Bootstrap Variable Sets */
+
+/* ------------------ */
+
+// Variables
+@import "variables";
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/font-awesome/scss/font-awesome";
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+// Apply a natural box layout model to all elements
+// but allowing components to change
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+// Inspired from https://tympanus.net/Development/CreativeLinkEffects/
+body,
+html {
+    height: 100%;
+}
+
+body {
+  margin-top: 25px;
+}
+
+h3 {
+  font-family: 'Pacifico', cursive;
+}
+
+footer {
+  font-size: 12px;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.brand {
+  font-size: 2em;
+  line-height: 70px;
+  width: 200px;
+}
+
+.rw-words {
+  display: inline;
+  text-indent: 10px;
+}
+
+.rw-words-1 span {
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    color: #6b969d;
+    animation: rotateWord 10s linear 1 0s;
+
+    &:nth-child(2) {
+        animation-delay: 2s;
+        color: #6b889d;
+    }
+
+    &:nth-child(3) {
+        animation-delay: 4s;
+        color: #6b739d;
+    }
+
+    &:nth-child(4) {
+        //animation-delay: 6s;
+        animation: lastWord 10s linear 1 6s forwards;
+        color: #000000;
+    }
+
+}
+
+@keyframes rotateWord {
+    0% {
+        opacity: 0;
+    }
+
+    2% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    17% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes lastWord {
+    0% {
+        opacity: 0;
+    }
+
+    2% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    17% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+  max-width: 700px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+a.flip-animate {
+  color: #000;
+  perspective: 1000px;
+
+  span {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    transition: transform 0.3s;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+  }
+
+  span:before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: attr(data-hover);
+    transition: color 0.3s;
+    transform: rotateX(-90deg);
+    transform-origin: 50% 0;
+    text-align: left;
+  }
+
+  &:hover span,
+  &:focus span {
+    transform: rotateX(90deg) translateY(-22px);
+  }
+
+  &:hover span:before,
+  &:focus span:before {
+    color: rgb(210, 73, 54);
+  }
+}
+
+.banner
+{
+  display:block;
+  position:relative;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner img {
+  // transform: scaleX(-1);
+  // filter: FlipH;
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 1.3rem;
+    padding-left: 1.3rem;
+  }
+}
+
+.display-3 { font-size: 4em; }
+.display-4 { font-size: 2rem; }
+
+span.hr {
+  margin: auto;
+  // width: 100px;
+  // height: 60px;
+  position: relative;
+  // display: block;
+  text-align: center;
+}
+
+span.hr:before, span.hr:after {
+  content: '';
+  width: 120px;
+  transform: translateY( 7px );
+  height: 1px;
+  background: #000;
+  position: absolute;
+  top: 30px;
+}
+
+span.hr:before {
+right: 100%;
+}
+span.hr:after {
+left: 100%;
+}
+
+.form-control:focus {
+  border-color: #405057;
+}

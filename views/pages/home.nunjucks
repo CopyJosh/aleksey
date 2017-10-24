@@ -1,0 +1,67 @@
+{% extends 'layout.nunjucks' %}
+
+{% block content %}
+<div class="row pb-3">
+  <h1 class="display-3 mt-0 py-2 mx-auto text-center">Aleksey Chernobelskiy</h1>
+  <div class="container">
+    <img class="rounded float-left mr-3" height="300px" src="{{ assets('images/headshot.png') }}" alt="Meet Aleksey">
+    <div class="pt-2">
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+      <p>Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+      <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row mb-2">
+  <div class="col-lg-6">
+    <h4 class="display-4">Education</h4>
+    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+  </div>
+  <div class="col-lg-6">
+    <h4 class="display-4">Goals</h4>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <h4 class="display-4">Experience</h4>
+    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+  </div>
+  <div class="col-lg-6">
+    <h4 class="display-4">Mission</h4>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+  </div>
+</div>
+
+<div class="row" align="center">
+  <div class="col">
+    <h3 class="mx-auto text-center">
+      Grab
+        <span class="hr"><i class="fa fa-coffee" aria-hidden="true"></i></span>
+      Coffee
+    </h3>
+  </div>
+</div>
+<div class="row mx-auto pt-2" align="center">
+  <div class="col">
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="First name">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Last name">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="City to meet up">
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" rows="3" placeholder="Talking Points"></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark">Request a Coffee on Aleksey</button>
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}
