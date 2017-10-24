@@ -26,8 +26,8 @@
         {% include "partials/header.nunjucks" %}
       </div>
 
-      <div class="container-fluid banner" align="center" style="background-image: url({{ assets('images/header.png') }});">
-        <img src="{{ assets('images/header.png') }}" alt="Meet Aleksey"/>
+      <div class="container-fluid banner" align="center" style="background-image: url('images/header.png');">
+        <img src="images/header.png" alt="Meet Aleksey"/>
       </div>
 
       <div class="container">
